@@ -30,6 +30,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Autowired
     private JwtTokenAdminInterceptor jwtTokenAdminInterceptor;
 
+    // Spring 不知道“这个拦截器要用于哪些请求”，所以要在 WebMvcConfigurer 中注册
     /**
      * 注册自定义拦截器
      *
